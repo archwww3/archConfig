@@ -86,14 +86,16 @@ ZSH_CUSTOM=~/.oh-my-zsh/custom
 plugins=(
 	git
 	z
+	#fzf-zsh-plugin
 	#zsh-vi-mode
-	#vi-mode
+	vi-mode
 	zsh-autosuggestions
     #zsh-syntax-highlighting
 	fast-syntax-highlighting
+    #zsh-system-clipboard
 )
 
-plugins+=(zsh-vi-mode)
+#plugins+=(zsh-vi-mode)
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -102,11 +104,11 @@ plugins+=(zsh-vi-mode)
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -129,15 +131,41 @@ source $ZSH/oh-my-zsh.sh
 #source ~/.oh-my-zsh/custom/plugins/incr/incr*.zsh
 
 # 旧 vi - mode 使用的设置
-#VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
-#VI_MODE_SET_CURSOR=true
-#bindkey -M viins 'jj' vi-cmd-mode
-#KEYTIMEOUT=25
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+VI_MODE_SET_CURSOR=true
+bindkey -M viins 'jj' vi-cmd-mode
+KEYTIMEOUT=25
 #bindkey -M vicmd 'k' history-substring-search-up
 #bindkey -M vicmd 'j' history-substring-search-down
-
+#
+# Use ~~ as the trigger sequence instead of the default **
+#export FZF_COMPLETION_TRIGGER='~~'
+# Only changing the escape key to `jk` in insert mode, we still
+# keep using the default keybindings `^[` in other modes
+#ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
+#function zvm_after_select_vi_mode() {
+#  case $ZVM_MODE in
+#    $ZVM_MODE_NORMAL)
+#      # Something you want to do...
+#    ;;
+#    $ZVM_MODE_INSERT)
+#      # Something you want to do...
+#    ;;
+#    $ZVM_MODE_VISUAL)
+#      # Something you want to do...
+#    ;;
+#    $ZVM_MODE_VISUAL_LINE)
+#      # Something you want to do...
+#    ;;
+#    $ZVM_MODE_REPLACE)
+#      # Something you want to do...
+#    ;;
+#  esac
+#}
 #alias vi='nvim -p'
 alias ll='ls -al' 
+alias la='ls -a' 
+alias fzf='find * -type f | fzf > selected'
 #alias sv='sudo nvim'
 
 ######### 
@@ -152,3 +180,8 @@ alias setssfe='export all_proxy="socks5://192.168.1.103:2013";'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#export FZF_COMPLETION_TRIGGER=''
+#bindkey '^T' fzf-completion
+#bindkey '^I' $fzf_default_completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
