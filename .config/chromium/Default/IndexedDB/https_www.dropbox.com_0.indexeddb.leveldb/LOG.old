@@ -1,0 +1,6 @@
+2022/10/28-13:13:02.721 34b Reusing MANIFEST /home/testuser/.config/chromium/Default/IndexedDB/https_www.dropbox.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/10/28-13:13:02.721 34b Recovering log #3
+2022/10/28-13:13:02.744 34b Reusing old log /home/testuser/.config/chromium/Default/IndexedDB/https_www.dropbox.com_0.indexeddb.leveldb/000003.log 
+2022/10/28-13:26:00.130 535 Level-0 table #5: started
+2022/10/28-13:26:00.168 535 Level-0 table #5: 942822 bytes OK
+2022/10/28-13:26:00.170 535 Delete type=0 #3

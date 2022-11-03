@@ -89,6 +89,7 @@ plugins=(
 	#fzf-zsh-plugin
 	#zsh-vi-mode
 	vi-mode
+	fzf-tab
 	zsh-autosuggestions
     #zsh-syntax-highlighting
 	fast-syntax-highlighting
@@ -134,7 +135,9 @@ source $ZSH/oh-my-zsh.sh
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 VI_MODE_SET_CURSOR=true
 bindkey -M viins 'jj' vi-cmd-mode
+bindkey -M viins 'kk' vim-hello
 KEYTIMEOUT=25
+#bindkey -M vicmd 'kk' vim-hello
 #bindkey -M vicmd 'k' history-substring-search-up
 #bindkey -M vicmd 'j' history-substring-search-down
 #
@@ -162,10 +165,15 @@ KEYTIMEOUT=25
 #    ;;
 #  esac
 #}
+function vim-hello {
+   echo "CUTBUFFER"
+}
+zle -N vim-hello
+#
 #alias vi='nvim -p'
 alias ll='ls -al' 
 alias la='ls -a' 
-alias fzf='find * -type f | fzf > selected'
+#alias fzf='find * -type f | fzf > selected'
 #alias sv='sudo nvim'
 
 ######### 
@@ -185,3 +193,17 @@ alias setssfe='export all_proxy="socks5://192.168.1.103:2013";'
 #bindkey '^I' $fzf_default_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# fd - cd to selected directory
+
+# fuzzy grep open via ag
+vg() {
+  local file
+
+  file="$(ag --nobreak --noheading $@ | fzf -0 -1 | awk -F: '{print $1}')"
+
+  if [[ -n $file ]]
+  then
+     vim $file
+  fi
+}
+

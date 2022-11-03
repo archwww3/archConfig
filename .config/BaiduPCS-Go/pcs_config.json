@@ -1,0 +1,37 @@
+{
+ "baidu_active_uid": 2671172773,
+ "baidu_user_list": [
+  {
+   "uid": 2671172773,
+   "name": "相对分散的巨蟹",
+   "sex": "unknown",
+   "age": 6.3,
+   "bduss": "4tTzlyeVdZczJGSU9QeWgyYkpKUkZpSkFqbExqVU9ZNFUySWV3NVk5VzFRbUpmSVFBQUFBJCQAAAAAAAAAAAEAAACl3Dafz-C21LfWyaK1xL7e0LcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALW1Ol-1tTpfNk",
+   "ptoken": "",
+   "stoken": "",
+   "sboxtkn": "",
+   "cookies": "BDUSS=4tTzlyeVdZczJGSU9QeWgyYkpKUkZpSkFqbExqVU9ZNFUySWV3NVk5VzFRbUpmSVFBQUFBJCQAAAAAAAAAAAEAAACl3Dafz-C21LfWyaK1xL7e0LcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALW1Ol-1tTpfNk; STOKEN=4abed2f3f9b7d28bae73fb69c0b34e64c043288e70caa963e429239713d74724",
+   "workdir": "/root sq xn bz 单行本 短篇 合集/[兔子老大 (Sayika)"
+  }
+ ],
+ "appid": 266719,
+ "cache_size": 65536,
+ "max_parallel": 1,
+ "max_upload_parallel": 4,
+ "max_download_load": 1,
+ "max_upload_load": 4,
+ "max_download_rate": 0,
+ "max_upload_rate": 0,
+ "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36",
+ "pcs_ua": "",
+ "pcs_addr": "pcs.baidu.com",
+ "pan_ua": "netdisk;P2SP;3.0.0.8;netdisk;11.12.3;ANG-AN00;android-android;10.0;JSbridge4.4.0;jointBridge;1.1.0;",
+ "savedir": "/home/testuser/Downloads",
+ "enable_https": true,
+ "force_login_username": "",
+ "proxy": "",
+ "local_addrs": "",
+ "no_check": true,
+ "ignore_illegal": false,
+ "u_policy": "fail"
+}

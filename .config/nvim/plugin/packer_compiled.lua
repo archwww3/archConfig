@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/root/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/root/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/root/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/root/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/root/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/testuser/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/testuser/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/testuser/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/testuser/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/testuser/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -75,62 +75,44 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["alpha-nvim"] = {
-    config = { "\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22confing.dashboard\frequire\0" },
     loaded = true,
-    path = "/root/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    path = "/home/testuser/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
   ["doom-one.nvim"] = {
-    config = { "\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme doom-one\bcmd\bvim\0" },
     loaded = true,
-    needs_bufread = false,
-    path = "/root/.local/share/nvim/site/pack/packer/opt/doom-one.nvim",
+    path = "/home/testuser/.local/share/nvim/site/pack/packer/start/doom-one.nvim",
     url = "https://github.com/NTBBloodbath/doom-one.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "/root/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    path = "/home/testuser/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/root/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    path = "/home/testuser/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/root/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/home/testuser/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/root/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    path = "/home/testuser/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/root/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/home/testuser/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Setup for: doom-one.nvim
-time([[Setup for doom-one.nvim]], true)
-try_loadstring("\27LJ\2\nﬂ\6\0\0\3\0\23\0P6\0\0\0'\2\1\0B\0\2\0016\0\2\0009\0\3\0+\1\1\0=\1\4\0006\0\2\0009\0\3\0+\1\2\0=\1\5\0006\0\2\0009\0\3\0+\1\1\0=\1\6\0006\0\2\0009\0\3\0+\1\2\0=\1\a\0006\0\2\0009\0\3\0+\1\1\0=\1\b\0006\0\2\0009\0\3\0+\1\1\0=\1\t\0006\0\2\0009\0\3\0+\1\1\0=\1\n\0006\0\2\0009\0\3\0)\1\20\0=\1\v\0006\0\2\0009\0\3\0+\1\2\0=\1\f\0006\0\2\0009\0\3\0+\1\1\0=\1\r\0006\0\2\0009\0\3\0+\1\1\0=\1\14\0006\0\2\0009\0\3\0+\1\2\0=\1\15\0006\0\2\0009\0\3\0+\1\2\0=\1\16\0006\0\2\0009\0\3\0+\1\2\0=\1\17\0006\0\2\0009\0\3\0+\1\2\0=\1\18\0006\0\2\0009\0\3\0+\1\2\0=\1\19\0006\0\2\0009\0\3\0+\1\2\0=\1\20\0006\0\2\0009\0\3\0+\1\2\0=\1\21\0006\0\2\0009\0\3\0+\1\1\0=\1\22\0K\0\1\0\28doom_one_plugin_lspsaga#doom_one_plugin_vim_illuminate%doom_one_plugin_indent_blankline\29doom_one_plugin_whichkey\29doom_one_plugin_startify\30doom_one_plugin_dashboard\30doom_one_plugin_nvim_tree\27doom_one_plugin_neogit\30doom_one_plugin_telescope\27doom_one_plugin_barbar\26doom_one_plugin_neorg#doom_one_pumblend_transparency\29doom_one_pumblend_enable$doom_one_transparent_background$doom_one_diagnostics_text_color\31doom_one_enable_treesitter\29doom_one_italic_comments\29doom_one_terminal_colors\29doom_one_cursor_coloring\6g\bvim\20packer-doom-one\frequire\0", "setup", "doom-one.nvim")
-time([[Setup for doom-one.nvim]], false)
-time([[packadd for doom-one.nvim]], true)
-vim.cmd [[packadd doom-one.nvim]]
-time([[packadd for doom-one.nvim]], false)
--- Config for: doom-one.nvim
-time([[Config for doom-one.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme doom-one\bcmd\bvim\0", "config", "doom-one.nvim")
-time([[Config for doom-one.nvim]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22confing.dashboard\frequire\0", "config", "alpha-nvim")
-time([[Config for alpha-nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

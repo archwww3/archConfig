@@ -1,0 +1,22 @@
+exit
+
+ls
+cd ..
+la
+ls
+cd 3
+cd #3
+cd [自购][Atlus]\ Persona\ 4\ Golden\ _女神异闻录4黄金版\ \ 豪华版汉化硬盘版[官方中文][9.83G][BDODGD]_\ GALGAME汉化区_\ 免空资源区/
+ls
+cd..
+cd ..
+cd 因od关闭的备份本子/
+ls
+cd ..
+ls
+cd root\ sq\ xn\ bz\ 单行本\ 短篇\ 合集/
+ls
+exit
+cd [兔子老大\ (Sayika)/
+ls
+d 002.part01.rar 
